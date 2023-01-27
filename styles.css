@@ -30,6 +30,7 @@ body {
 }
 #content nav h2:hover{
     color:aquamarine;
+    cursor: pointer;
 }
 .content{
     margin-left: 11%;
@@ -39,7 +40,7 @@ body {
 #home_top{
     display: flex;
     flex-direction: row;
-    background-image:url("images/busycity.png");
+    background-image:url("images/background/busycity.png");
     background-size: cover;
     width: 100%;
     height: 18%;
@@ -108,6 +109,7 @@ body {
 }
 #search_bar h1:hover{
     color: #252523;
+    cursor: pointer;
 }
 #search{
     width: 50%;
@@ -139,6 +141,11 @@ body {
     width:100%;
     height: 90;
 }
+#categories_container #categories .categories_image img:hover{
+    width:100%;
+    height: 90;
+    cursor: pointer;
+}
 #categories_text{
     display: flex;
     justify-content: space-around;
@@ -148,12 +155,13 @@ body {
 }
 #categories_text h1:hover{
     color: black;
+    cursor: pointer;
 }
 .products_container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image:url("images/sandworld1.png");
+    background-image:url("images/background/sandworld1.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -189,7 +197,7 @@ body {
     font-size: 13px;
 }
 .products_content{
-    width: 70%;
+    width: 80%;
     height: 55%;
     margin-top: 6%;
     background-color: #EFEEEE;
@@ -209,6 +217,7 @@ body {
     width: 25%;
 }
 .products .titel{
+    width: 80%;
     margin: 0%;
     margin-top: 1%;
     display: inline;
@@ -217,8 +226,12 @@ body {
     border-radius: 10px;
     width: 90%;
     height: 70%;
-
-    
+}
+.products img:hover{
+    cursor: pointer;
+}
+.products .titel:hover{
+    cursor: pointer;
 }
 .products_buy{
     display: flex;
@@ -226,7 +239,6 @@ body {
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 2%;
 }
 .products_buy h2{
     background-color:#9F9E9E;
@@ -235,4 +247,55 @@ body {
 }
 .products_buy h2:hover{
     background-color:#9f9e9e69;
+    cursor: pointer;
+}
+.products_container_long{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url("images/background/cave.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.products_content_long{
+    width: 80%;
+    height: 55%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background-color: #EFEEEE;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer{
+    background-color: #EFEEEE;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:#5D6F75;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    font-size: 8px;
+}
+#footer_categories{
+    margin-left: 20%;
+    margin-top: 1%;
+}
+#footer_deals{
+    margin-top: 1%;
+}
+#footer_contact{
+    margin-top: 1%;
+    margin-right: 20%;
+}
+
+.footer h1:hover{
+    color: #252523;
+    cursor: pointer;
 }
