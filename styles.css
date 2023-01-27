@@ -5,7 +5,20 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
+ a {
+    text-decoration: none;
+    color: #EFEEEE;
+}
+a:hover{
+    color: aquamarine;
+}
+h1 a{
+    text-decoration: none;
+    color:#5D6F75;
+}
+h1 a:hover{
+    color:#252523;
+}
 #continer{
     height: 95vh;
     width: 100%;
@@ -161,7 +174,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image:url("images/background/sandworld1.png");
+    background-image:url("images/background/sandworld.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
