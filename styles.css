@@ -26,7 +26,6 @@ h1 a:hover{
 #content{
     display: flex;
     flex-direction: row;
-    height: 400vh;
 }
 #content nav{
     display: flex;
@@ -40,6 +39,7 @@ h1 a:hover{
     font-style: italic;
     font-size: 12px;
     align-items: center;
+    
 }
 #content nav h2:hover{
     color:aquamarine;
@@ -59,7 +59,8 @@ h1 a:hover{
     height: 18%;
 }
 .info_sidebar{
-    width: 40%;
+    padding-right: 1.5%;
+    width: 30%;
     height: 100%;
     background:rgb(0,0,0);     
     filter:alpha(opacity=50); 
@@ -91,10 +92,12 @@ h1 a:hover{
     margin-top: 20%;
     background-color: #303E46;
     margin-left: 7%;
-    width: 28%;
+    width: 30%;
     padding: 5%;
+    padding-left: 4.5%;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     color: lightblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: initial;
@@ -112,6 +115,7 @@ h1 a:hover{
     align-items: center;
     width: 60%;
     height: 10%;
+    padding-right: 1%;
     border-radius: 1%;
     background-color:#EFEEEE;
     color:#707070;
@@ -125,7 +129,7 @@ h1 a:hover{
     cursor: pointer;
 }
 #search{
-    width: 50%;
+    width: 40%;
     height: 50%;
     border-radius: 20px;
     background-color: white;
@@ -146,7 +150,7 @@ h1 a:hover{
     margin-top: 2%;
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 16%;
     padding: 1%;
     background-color: #EFEEEE;
 }
@@ -178,7 +182,7 @@ h1 a:hover{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 25%;
+    height: 30%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .info_bar{
@@ -249,7 +253,7 @@ h1 a:hover{
 .products_buy{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     justify-content: space-evenly;
     align-items: center;
 }

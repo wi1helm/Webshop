@@ -1,0 +1,142 @@
+html,body{height:100vh}
+
+body {
+
+    margin: 0px;
+    padding: 0px;
+}
+ a {
+    text-decoration: none;
+    color: #EFEEEE;
+}
+a:hover{
+    color: aquamarine;
+}
+h1 a{
+    text-decoration: none;
+    color:#5D6F75;
+}
+h1 a:hover{
+    color:#252523;
+}
+#continer{
+    height: 95vh;
+    width: 100%;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    height: 400vh;
+}
+#content nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 11%;
+    height: 140vh;
+    background-color: #252523;
+    color: #EFEEEE;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    align-items: center;
+}
+#content nav h2:hover{
+    color:aquamarine;
+    cursor: pointer;
+}
+.content{
+    margin-left: 11%;
+    width: 100%;
+
+}
+#home_top{
+    display: flex;
+    flex-direction: row;
+    background-image:url("images/background/busycity.png");
+    background-size: cover;
+    width: 100%;
+}
+.info_sidebar{
+    width: 40%;
+    height: 100%;
+    background:rgb(0,0,0);     
+    filter:alpha(opacity=50); 
+    background:rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+.info_sidebar h1{
+    margin-top: 4%;
+    margin-left: 7%;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    font-size: 25px;
+}
+.info_sidebar p{
+    margin: 0%;
+    margin-left: 7%;
+    display: flex;
+    align-items: flex-start;
+    color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    font-size: 13px;
+}
+.info_sidebar h2{
+    margin-top: 20%;
+    background-color: #303E46;
+    margin-left: 7%;
+    width: 28%;
+    padding: 5%;
+    border-radius: 10px;
+    display: flex;
+    color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    font-size: 18px;
+}
+#container_bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+#search_bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 10%;
+    border-radius: 1%;
+    background-color:#EFEEEE;
+    color:#707070;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size:7px;
+
+}
+#search_bar h1:hover{
+    color: #252523;
+    cursor: pointer;
+}
+#search{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: white;
+}
+.products_container_background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30%;
+    margin: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
