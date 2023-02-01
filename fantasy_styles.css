@@ -26,20 +26,21 @@ h1 a:hover{
 #content{
     display: flex;
     flex-direction: row;
-    height: 400vh;
+    height: 280vh;
 }
 #content nav{
     display: flex;
     flex-direction: column;
     position: fixed;
     width: 11%;
-    height: 140vh;
+    height: 100%;
     background-color: #252523;
     color: #EFEEEE;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-size: 12px;
     align-items: center;
+    
 }
 #content nav h2:hover{
     color:aquamarine;
@@ -56,9 +57,11 @@ h1 a:hover{
     background-image:url("images/background/busycity.png");
     background-size: cover;
     width: 100%;
+    height: 18%;
 }
 .info_sidebar{
-    width: 40%;
+    padding-right: 1.5%;
+    width: 30%;
     height: 100%;
     background:rgb(0,0,0);     
     filter:alpha(opacity=50); 
@@ -90,10 +93,12 @@ h1 a:hover{
     margin-top: 20%;
     background-color: #303E46;
     margin-left: 7%;
-    width: 28%;
+    width: 30%;
     padding: 5%;
+    padding-left: 4.5%;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     color: lightblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: initial;
@@ -111,6 +116,7 @@ h1 a:hover{
     align-items: center;
     width: 60%;
     height: 10%;
+    padding-right: 1%;
     border-radius: 1%;
     background-color:#EFEEEE;
     color:#707070;
@@ -124,19 +130,137 @@ h1 a:hover{
     cursor: pointer;
 }
 #search{
-    width: 50%;
+    width: 40%;
     height: 50%;
     border-radius: 20px;
     background-color: white;
 }
-.products_container_background{
+
+.products_content_container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image:url("images/background/sandworld.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 30%;
-    margin: 0%;
+    background-position: 50% 0%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.info_bar{
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    background:rgb(0,0,0);     
+    filter:alpha(opacity=50); 
+    background:rgba(0,0,0,0.5);
+}
+.info_bar h1{
+    margin: 0%;
+    margin-top: 2%;
+    margin-left: 3%;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    font-style: italic;
+    font-size: 25px;
+}
+.info_bar p{
+    width: 20%;
+    margin: 0%;
+    margin-left: 3%;
+    margin-bottom: 1.5%;
+    display: flex;
+    align-items: flex-start;
+    color: lightblue;
+    font-style: inherit;
+    font-size: 13px;
+}
+#products_container{
+    width: 80%;
+    height: 100%;
+    margin-top: 8%;
+    background-color: #EFEEEE;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.products_content{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+
+}
+.products{
+    font-size: 9px;
+    margin: 0%;
+    color:#292D2E;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.products .titel{
+    width: 80%;
+    margin: 0%;
+    margin-top: 1%;
+    display: inline;
+}
+.products img{
+    border-radius: 10px;
+    width: 90%;
+    height: 70%;
+}
+.products img:hover{
+    cursor: pointer;
+}
+.products .titel:hover{
+    cursor: pointer;
+}
+.products_buy{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.products_buy h2{
+    background-color:#9F9E9E;
+    padding: 4%;
+    border-radius: 10px;
+}
+.products_buy h2:hover{
+    background-color:#9f9e9e69;
+    cursor: pointer;
+}
+.footer{
+    background-color: #EFEEEE;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:#5D6F75;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    font-size: 8px;
+}
+#footer_categories{
+    margin-left: 20%;
+    margin-top: 1%;
+}
+#footer_deals{
+    margin-top: 1%;
+}
+#footer_contact{
+    margin-top: 1%;
+    margin-right: 20%;
+}
+
+.footer h1:hover{
+    color: #252523;
+    cursor: pointer;
 }
