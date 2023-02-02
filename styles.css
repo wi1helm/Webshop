@@ -56,7 +56,7 @@ h1 a:hover{
     background-image:url("images/background/busycity.png");
     background-size: cover;
     width: 100%;
-    height: 18%;
+    height: 24%;
 }
 .info_sidebar{
     padding-right: 1.5%;
@@ -114,7 +114,7 @@ h1 a:hover{
     justify-content: space-around;
     align-items: center;
     width: 60%;
-    height: 10%;
+    height: 60px;
     padding-right: 1%;
     border-radius: 1%;
     background-color:#EFEEEE;
