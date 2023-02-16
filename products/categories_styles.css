@@ -207,10 +207,16 @@ h1 a:hover{
     margin-top: 1%;
     display: inline;
 }
+a{  
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
 .products img{
     border-radius: 10px;
     width: 90%;
-    height: 70%;
+    height: 100%;
 }
 .products img:hover{
     cursor: pointer;
