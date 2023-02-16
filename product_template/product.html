@@ -8,7 +8,7 @@
     <script src="../javascript.js"></script>
     <title>Masterpiece Market</title>
 </head>
-<body>
+<body onload="load()">
     <div id="container">
         <div id="content">
             <nav>
@@ -25,12 +25,12 @@
             <div class="content">
                 <div id="home_top">
                     <div class="info_sidebar">
-                        <h1>!ArtWork Title!</h1>
-                        <p>"What theme"</p>
-                        <p style="margin-top: 15%; font-size: 15px;">Description</p>
-                        <p style="margin-top: 5%;">Art work description obama obama roligtgdfkgfjkdlgn jfdkng jkfdngjkfdngkjdfnjk gifdgld fngjkdfnjkfgnfdj gjkfdngjkdfnfgkdf ngjdfngjkd fnjfgnjkndfjkgnfdjkn</p>
+                        <h1 id="title">!ArtWork Title!</h1>
+                        <p id="theme">"What theme"</p>
+                        <p style="margin-top: 15%; font-size: 15px;" >Description</p>
+                        <p style="margin-top: 5%;" id="desc">Art work description obama obama roligtgdfkgfjkdlgn jfdkng jkfdngjkfdngkjdfnjk gifdgld fngjkdfnjkfgnfdj gjkfdngjkdfnfgkdf ngjdfngjkd fnjfgnjkndfjkgnfdjkn</p>
                         
-                        <h1 style="margin-top: 20%;">Pris 100kr</h1>
+                        <h1 style="margin-top: 20%;" id="price">Pris 100kr</h1>
                         <h2>Order Now</h2>
 
                     </div>
@@ -49,7 +49,7 @@
                         
                         <div id="product_information_container">
                             <div class="product_products">
-                                <img src="../images/fantasy.png" id="img1">
+                                <img src="../images/fantasy.png" id="img">
 
                             </div>
 
