@@ -214,7 +214,7 @@ h1 a:hover{
 }
 .products_content{
     width: 80%;
-    height: 55%;
+    height: 50%;
     margin-top: 6%;
     background-color: #EFEEEE;
     border-radius: 13px;
@@ -232,6 +232,12 @@ h1 a:hover{
     align-items: center;
     width: 25%;
 }
+.products a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 .titel{
     display: flex;
     justify-content: center;
@@ -244,7 +250,7 @@ h1 a:hover{
 }
 .products img{
     border-radius: 10px;
-    width: 90%;
+    width: 96%;
     height: 100%;
 }
 
