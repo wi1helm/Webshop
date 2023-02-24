@@ -159,7 +159,7 @@ function loadCart() {
     var defualtCartBottom = '<div class="checkout"><div class="total"><div><div class="Subtotal">Sub-Total</div><div class="items">'+ subAmount +' items</div></div><div class="total-amount">'+total+'kr</div></div><a href="../complete_order/order_complete.html"><h1 class="button">Checkout</h1></a></div>';
     var items = "";
     new_cart.forEach(element => {
-        items += '<div class="cart_items"><img src='+ element.img +' style="width:50px;"/><h1 class="title">'+ element.title +'</h1><div class="counter"><div class="btn" onclick="addAmount(\'' + element.id + '\')" >+</div><div class="count">'+element.amount+'</div><div class="btn" onclick="removeAmount(\'' + element.id + '\')" >-</div></div><div class="prices"><div class="amount">'+ element.price +'</div><div class="remove" onclick="removeItem(\'' + element.id + '\')">Remove</div></div></div>';
+        items += '<div class="cart_items"><img src='+ element.img +' style="width:50px;"/><h1 class="title">'+ element.title +'</h1><div class="counter"><div class="btn" onclick="addAmount(\'' + element.id + '\')" >+</div><div class="count">'+element.amount+'</div><div class="btn" onclick="removeAmount(\'' + element.id + '\')" >-</div></div><div class="prices"><div class="amount">'+ element.price +"Kr"+'</div><div class="remove" onclick="removeItem(\'' + element.id + '\')">Remove</div></div></div>';
     });
     document.getElementById("cart_content").innerHTML = defualtCartTop + items + defualtCartBottom;
     
