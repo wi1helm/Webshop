@@ -287,12 +287,12 @@ ul{
     margin-top: 5px;
     width: 100%;
     border: none;
-    background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+    background-color: #252523;
     border-radius: 20px;
     cursor: pointer;
     font-size: 40px;
     font-family: "Open Sans";
-    color: #202020;
+    color: white;
     text-align: center;
 }
 .checkout a{
@@ -470,10 +470,13 @@ ul{
     #home_top{
         height: 500px;
     }
-
     .products{
+        width:240px;
+    }
+    .products a img{
         width:300px;
     }
+    
     #content nav{
     display: none;
     }
@@ -535,5 +538,19 @@ ul{
     .footer{
         justify-content: space-evenly;
         gap:10px;
+    }
+    #cart_content{
+        left: 25px;
+        width: 350px;
+    }
+    .cart_items{
+        font-size: 8px;
+    }
+    .checkout{
+        width: 90%;
+        margin-left: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 10px;
     }
 }
