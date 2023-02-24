@@ -126,7 +126,7 @@ function productAddCart(){
 
 function openCart(){
     document.getElementById("background").style.display = "block";
-    document.getElementById("background").style.height = document.getElementById('cart_content').offsetHeight+170+"px"
+    document.getElementById("background").style.height = document.getElementById('cart_content').offsetHeight+200+"px"
     document.getElementById("background").style.zIndex = "10";
  
     document.getElementById("content").style.position ="fixed";
