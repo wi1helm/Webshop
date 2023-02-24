@@ -75,6 +75,31 @@ let products = [{id:"angel_war",title:"Angel War",theme:"Fantasy",decs:"Obama",p
             ]           
 let cart = [];
 
+
+
+function search(){
+    var input;
+    var results = 0;
+    document.getElementById("products_list").innerHTML = '';
+    input = document.getElementById("search").value;
+    console.log(input);
+    products.forEach(element => {
+            if (element.id.includes(input) && results < 8){
+                results += 1;
+                console.log(element.id.includes(input));
+                document.getElementById("products_list").innerHTML += '<li><a onclick="saveClick(\'' + element.id + '\')">'+element.title+'</a></li>';
+            }
+    });
+    if (input == "" || results == 0){
+        document.getElementById("products_list").innerHTML = '';
+        document.getElementById("search_content").style.display = "none";
+    }
+    else{
+        document.getElementById("search_content").style.display = "block";
+    }
+}
+
+
 function saveClick(id){
     console.log(id);
     sessionStorage.setItem("lastClick", id);
