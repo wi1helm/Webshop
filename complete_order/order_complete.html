@@ -5,9 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="complete.css">
+    <script src="../javascript.js"></script>
     <title>Masterpiece Market</title>
 </head>
 <body>
+    <div class="cart_dropdown">
+        <div id="background">
+            <div id="cart_content" id="#cart">
+                <div class="cart_header">
+                    <h3 class="heading">Shopping Cart</h3>
+                    <h3 class="heading" id="close" onclick="closeCart()">Close</h3>
+                    <h3 class="action" onclick="clearCart()">Remove all</h3>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="container">
         <div id="content">
             <nav>
@@ -32,7 +47,7 @@
                                 <div id="search">
                                    
                                 </div>
-                                <h1>Cart</h1>
+                                <a onclick="openCart(), loadCart()"><h1>Cart</h1></a>
                             </div>
                         </top>
                         

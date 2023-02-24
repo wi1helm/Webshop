@@ -9,6 +9,20 @@
     <title>Masterpiece Market</title>
 </head>
 <body>
+    <div class="cart_dropdown">
+        <div id="background">
+            <div id="cart_content" id="#cart">
+                <div class="cart_header">
+                    <h3 class="heading">Shopping Cart</h3>
+                    <h3 class="heading" id="close" onclick="closeCart()">Close</h3>
+                    <h3 class="action" onclick="clearCart()">Remove all</h3>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="container">
         <div id="content">
             <nav>
@@ -40,7 +54,7 @@
                             <div id="search">
                                
                             </div>
-                            <h1>Cart</h1>
+                            <a onclick="openCart(), loadCart()"><h1>Cart</h1></a>
                         </div>
                     </div>
                 </div>
@@ -52,137 +66,137 @@
                     <div id="products_container">
                         <div class="products_content">
                             <div class="products">
-                                <a onclick="saveClick('angle_war')" href="../product_template/product.html"><img src="../images/new/Montain Reserve.png"></a>
-                                <h2 class="titel">Mountain Reserve 1080x1920</h2>
+                                <a onclick="saveClick('art_deco_elegance')" ><img src="../images/architecture/Art_Deco_Elegance.png"></a> 
+                                <a onclick="saveClick('art_deco_elegance')"  class="titel"><h2>Art Deco Elegance</h2></a>
                                 <div class="products_buy">
-                                    <h1>99 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>120 Kr</h1>
+                                    <a onclick="addProduct('art_deco_elegance')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('mount_resv')" href="../product_template/product.html"><img src="../images/new/angle war.png"></a>
-                                <h2 class="titel">Angle War 1080x1920</h2>
+                                <a onclick="saveClick('brutalist_beauty')" ><img src="../images/architecture/Brutalist_Beauty.png"></a> 
+                                <a onclick="saveClick('brutalist_beauty')"  class="titel"><h2>Brutalist Beauty</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>140 Kr</h1>
+                                    <a onclick="addProduct('brutalist_beauty')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/world protest.png">
-                                <h2 class="titel">World Protest 4K</h2>
+                                <a onclick="saveClick('classical_splendor')" ><img src="../images/architecture/Classical_Splendor.png"></a> 
+                                <a onclick="saveClick('classical_splendor')"  class="titel"><h2>Classical Splendor</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>160 Kr</h1>
+                                    <a onclick="addProduct('classical_splendor')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/wavy waterfall.png">
-                                <h2 class="titel">Wavy Waterfall 8K</h2>
+                                <a onclick="saveClick('contemporary_minimalism')" ><img src="../images/architecture/Contemporary_Minimalism.png"></a> 
+                                <a onclick="saveClick('contemporary_minimalism')"  class="titel"><h2>Contemporary Minimalism</h2></a>
                                 <div class="products_buy">
-                                    <h1>249 Kr</h1>
-                                    <h2>Add To Cart</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products_content">
-                            <div class="products">
-                                <img src="../images/new/Montain Reserve.png">
-                                <h2 class="titel">Mountain Reserve 1080x1920</h2>
-                                <div class="products_buy">
-                                    <h1>99 Kr</h1>
-                                    <h2>Add To Cart</h1>
-                                </div>
-                            </div>
-                            <div class="products">
-                                <img src="../images/new/angle war.png">
-                                <h2 class="titel">Angle War 1080x1920</h2>
-                                <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
-                                </div>
-                            </div>
-                            <div class="products">
-                                <img src="../images/new/world protest.png">
-                                <h2 class="titel">World Protest 4K</h2>
-                                <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
-                                </div>
-                            </div>
-                            <div class="products">
-                                <img src="../images/new/wavy waterfall.png">
-                                <h2 class="titel">Wavy Waterfall 8K</h2>
-                                <div class="products_buy">
-                                    <h1>249 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>200 Kr</h1>
+                                    <a onclick="addProduct('contemporary_minimalism')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products_content">
                             <div class="products">
-                                <img src="../images/new/Montain Reserve.png">
-                                <h2 class="titel">Mountain Reserve 1080x1920</h2>
+                                <a onclick="saveClick('eastern_opulence')" ><img src="../images/architecture/Eastern_Opulence.png"></a> 
+                                <a onclick="saveClick('eastern_opulence')"  class="titel"><h2>Eastern Opulence</h2></a>
                                 <div class="products_buy">
-                                    <h1>99 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>160 Kr</h1>
+                                    <a onclick="addProduct('eastern_opulence')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/angle war.png">
-                                <h2 class="titel">Angle War 1080x1920</h2>
+                                <a onclick="saveClick('futuristic_cityscape')" ><img src="../images/architecture/Futuristic_Cityscape.png"></a> 
+                                <a onclick="saveClick('futuristic_cityscape')"  class="titel"><h2>Futuristic Cityscap</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>120 Kr</h1>
+                                    <a onclick="addProduct('futuristic_cityscape')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/world protest.png">
-                                <h2 class="titel">World Protest 4K</h2>
+                                <a onclick="saveClick('geometric_shapes')" ><img src="../images/architecture/Geometric_Shapes.png"></a> 
+                                <a onclick="saveClick('geometric_shapes')"  class="titel"><h2>Geometric Shapes</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>110 Kr</h1>
+                                    <a onclick="addProduct('geometric_shapes')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/wavy waterfall.png">
-                                <h2 class="titel">Wavy Waterfall 8K</h2>
+                                <a onclick="saveClick('gothic_cathedral')" ><img src="../images/architecture/Gothic_Cathedral.png"></a> 
+                                <a onclick="saveClick('gothic_cathedral')"  class="titel"><h2>Gothic Cathedral</h2></a>
                                 <div class="products_buy">
-                                    <h1>249 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>140 Kr</h1>
+                                    <a onclick="addProduct('gothic_cathedral')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products_content">
                             <div class="products">
-                                <img src="../images/new/Montain Reserve.png">
-                                <h2 class="titel">Mountain Reserve 1080x1920</h2>
+                                <a onclick="saveClick('historic_landmark')" ><img src="../images/architecture/Historic_Landmark.png"></a> 
+                                <a onclick="saveClick('historic_landmark')"  class="titel"><h2>Historic Landmark</h2></a>
                                 <div class="products_buy">
-                                    <h1>99 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>170 Kr</h1>
+                                    <a onclick="addProduct('historic_landmark')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/angle war.png">
-                                <h2 class="titel">Angle War 1080x1920</h2>
+                                <a onclick="saveClick('industrial_strength')" ><img src="../images/architecture/Industrial_Strength.png"></a> 
+                                <a onclick="saveClick('industrial_strength')"  class="titel"><h2>Industrial Strength</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>260 Kr</h1>
+                                    <a onclick="addProduct('industrial_strength')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/world protest.png">
-                                <h2 class="titel">World Protest 4K</h2>
+                                <a onclick="saveClick('mediterranean_romance')" ><img src="../images/architecture/Mediterranean_Romance.png"></a> 
+                                <a onclick="saveClick('mediterranean_romance')"  class="titel"><h2>Mediterranean Romance</h2></a>
                                 <div class="products_buy">
-                                    <h1>199 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>210 Kr</h1>
+                                    <a onclick="addProduct('mediterranean_romance')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <img src="../images/new/wavy waterfall.png">
-                                <h2 class="titel">Wavy Waterfall 8K</h2>
+                                <a onclick="saveClick('modernist_masterpiece')" ><img src="../images/architecture/Modernist_Masterpiece.png"></a> 
+                                <a onclick="saveClick('modernist_masterpiece')"  class="titel"><h2>Modernist Masterpiece</h2></a>
                                 <div class="products_buy">
-                                    <h1>249 Kr</h1>
-                                    <h2>Add To Cart</h1>
+                                    <h1>240 Kr</h1>
+                                    <a onclick="addProduct('modernist_masterpiece')"><h2>Add To Cart</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products_content">
+                            <div class="products">
+                                <a onclick="saveClick('postmodern_palace')" ><img src="../images/architecture/Postmodern_Palace.png"></a> 
+                                <a onclick="saveClick('postmodern_palace')"  class="titel"><h2>Postmodern Palace</h2></a>
+                                <div class="products_buy">
+                                    <h1>180 Kr</h1>
+                                    <a onclick="addProduct('postmodern_palace')"><h2>Add To Cart</h1></a>
+                                </div>
+                            </div>
+                            <div class="products">
+                                <a onclick="saveClick('rustic_charm')" ><img src="../images/architecture/Rustic_Charm.png"></a> 
+                                <a onclick="saveClick('rustic_charm')"  class="titel"><h2>Rustic Charm</h2></a>
+                                <div class="products_buy">
+                                    <h1>190 Kr</h1>
+                                    <a onclick="addProduct('rustic_charm')"><h2>Add To Cart</h1></a>
+                                </div>
+                            </div>
+                            <div class="products">
+                                <a onclick="saveClick('scenic_lighthouse')" ><img src="../images/architecture/Scenic_Lighthouse.png"></a> 
+                                <a onclick="saveClick('scenic_lighthouse')"  class="titel"><h2>Scenic Lighthouse</h2></a>
+                                <div class="products_buy">
+                                    <h1>140 Kr</h1>
+                                    <a onclick="addProduct('scenic_lighthouse')"><h2>Add To Cart</h1></a>
+                                </div>
+                            </div>
+                            <div class="products">
+                                <a onclick="saveClick('skyscraper_sunrise')" ><img src="../images/architecture/Skyscraper_Sunrise.png"></a> 
+                                <a onclick="saveClick('skyscraper_sunrise')"  class="titel"><h2>Skyscraper Sunrise</h2></a>
+                                <div class="products_buy">
+                                    <h1>150 Kr</h1>
+                                    <a onclick="addProduct('skyscraper_sunrise')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>

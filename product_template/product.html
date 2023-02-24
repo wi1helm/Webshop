@@ -9,6 +9,20 @@
     <title>Masterpiece Market</title>
 </head>
 <body onload="load()">
+    <div class="cart_dropdown">
+        <div id="background">
+            <div id="cart_content" id="#cart">
+                <div class="cart_header">
+                    <h3 class="heading">Shopping Cart</h3>
+                    <h3 class="heading" id="close" onclick="closeCart()">Close</h3>
+                    <h3 class="action" onclick="clearCart()">Remove all</h3>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="container">
         <div id="content">
             <nav>
@@ -31,19 +45,19 @@
                         <p style="margin-top: 5%;" id="desc">Art work description obama obama roligtgdfkgfjkdlgn jfdkng jkfdngjkfdngkjdfnjk gifdgld fngjkdfnjkfgnfdj gjkfdngjkdfnfgkdf ngjdfngjkd fnjfgnjkndfjkgnfdjkn</p>
                         
                         <h1 style="margin-top: 20%;" id="price">Pris 100kr</h1>
-                        <h2>Order Now</h2>
+                        <a id="add" onclick="productAddCart()"><h2>Add To Cart</h1></a>
 
                     </div>
                     <div id="container_bar">
                         <top style="display: flex; justify-content: flex-end;">
                             <div id="search_bar">
-                                <h1><a href="fantasy.html">Fantasy</a></h1>
-                                <h1><a href="nature.html">Nature</a></h1>
-                                <h1><a href="sci-fi.html">Sci-Fi</a></h1>
+                                <h1><a href="../products/fantasy.html">Fantasy</a></h1>
+                                <h1><a href="../products/nature.html">Nature</a></h1>
+                                <h1><a href="../products/sci-fi.html">Sci-Fi</a></h1>
                                 <div id="search">
                                    
                                 </div>
-                                <h1>Cart</h1>
+                                <a onclick="openCart(), loadCart()"><h1>Cart</h1></a>
                             </div>
                         </top>
                         

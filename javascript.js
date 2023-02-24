@@ -1,8 +1,9 @@
 
-let products = [{id:"angel_war",title:"Angel War",theme:"Fantasy",decs:"Obama",price:"120Kr",img:"../images/new/angle war.png"},
-                {id:"mount_resv",title:"Mountain Reserve",theme:"Nature",decs:"Obama",price:"160Kr",img:"../images/new/Montain Reserve.png"},
-                {id:"wavy_fall",title:"Wavy Waterfall",theme:"Nature",decs:"Obama",price:"99Kr",img:"../images/new/wavy waterfall.png"},
-                {id:"world_prot",title:"World Protest",theme:"Sci-Fi",decs:"Obama",price:"149Kr",img:"../images/new/world protest.png"},
+
+let products = [{id:"angel_war",title:"Angel War",theme:"Fantasy",decs:"Obama",price:"120Kr",img:"../images/new/Angle_War.png"},
+                {id:"mount_resv",title:"Mountain Reserve",theme:"Nature",decs:"Obama",price:"160Kr",img:"../images/new/Montain_Reserve.png"},
+                {id:"wavy_fall",title:"Wavy Waterfall",theme:"Nature",decs:"Obama",price:"99Kr",img:"../images/new/Wavy_Waterfall.png"},
+                {id:"world_prot",title:"World Protest",theme:"Sci-Fi",decs:"Obama",price:"149Kr",img:"../images/new/World_Protest.png"},
                 {id:"ethereal_sunrise",title:"Ethereal Sunrise",theme:"Fantasy",decs:"Obama",price:"99Kr",img:"../images/low/Ethereal Sunrise.png"},
                 {id:"melancholy_city",title:"The Melancholy City",theme:"Fantasy",decs:"Obama",price:"60Kr",img:"../images/low/The Melancholy City.png"},
                 {id:"urban_jungle",title:"Urban Jungle",theme:"Nature",decs:"Obama",price:"50Kr",img:"../images/low/Urban Jungle.png"},
@@ -23,7 +24,7 @@ let products = [{id:"angel_war",title:"Angel War",theme:"Fantasy",decs:"Obama",p
                 {id:"quintet",title:"The Quintet",theme:"Fantasy",decs:"Obama",price:"199Kr",img:"../images/fantasy/The_Quintet.png"},
                 {id:"unicorn_meadows",title:"Unicorn_Meadows",theme:"Fantasy",decs:"Obama",price:"100Kr",img:"../images/fantasy/Unicorn_Meadows.png"},
                 {id:"wizards_workshop",title:"Wizards Workshop",theme:"Fantasy",decs:"Obama",price:"80Kr",img:"../images/fantasy/Wizards_Workshop.png"},
-                {id:"autumn_leaves",title:"Autumn Leaves",theme:"Nature",decs:"Obama",price:"120Kr",img:"../images/nature/Autumn_Leave.png"},
+                {id:"autumn_leaves",title:"Autumn Leaves",theme:"Nature",decs:"Obama",price:"120Kr",img:"../images/nature/Autumn_Leaves.png"},
                 {id:"bird_sancturary",title:"Bird Sanctuary",theme:"Nature",decs:"Obama",price:"99Kr",img:"../images/nature/Bird_Sanctuary.png"},
                 {id:"forest",title:"The Forest",theme:"Nature",decs:"Obama",price:"140Kr",img:"../images/nature/Forest.png"},
                 {id:"hidden_cave",title:"Hidden Cave",theme:"Nature",decs:"Obama",price:"160Kr",img:"../images/nature/Hidden_Cave"},
@@ -72,11 +73,12 @@ let products = [{id:"angel_war",title:"Angel War",theme:"Fantasy",decs:"Obama",p
                 {id:"scenic_lighthouse",title:"Scenic Lighthouse",theme:"Architecture",decs:"Obama",price:"140Kr",img:"../images/architecture/Scenic_Lighthouse.png"},
                 {id:"skyscraper_sunrise",title:"Skyscraper Sunrise",theme:"Architecture",decs:"Obama",price:"150Kr",img:"../images/architecture/Skyscraper_Sunrise.png"},
             ]           
-
+let cart = [];
 
 function saveClick(id){
     console.log(id);
     sessionStorage.setItem("lastClick", id);
+    location.href = "../product_template/product.html";
 }
 
 function load(){
@@ -90,4 +92,97 @@ function load(){
     document.getElementById("desc").innerHTML = products.find(x => x.id === lastclick).decs;
     document.getElementById("price").innerHTML = products.find(x => x.id === lastclick).price;
     document.getElementById("img").src = products.find(x => x.id === lastclick).img;
+    
+}
+function productAddCart(){
+    id = sessionStorage.getItem("lastClick");
+    addProduct(id);
+}
+
+function openCart(){
+    document.getElementById("background").style.display = "block";
+    document.getElementById("background").style.height = document.getElementById('cart_content').offsetHeight+130+"px"
+    document.getElementById("background").style.zIndex = "10";
+ 
+    document.getElementById("content").style.position ="fixed";
+}
+function closeCart(){
+
+    document.getElementById("background").style.height = 0;
+    document.getElementById("background").style.display = "none";
+    document.getElementById("background").style.zIndex = "0";
+    document.getElementById("content").style.position ="";
+    location.href = "#top";
+    console.log("nub");
+
+}
+
+
+
+function loadCart() {
+    if (JSON.parse(sessionStorage.getItem("cart")) == null){
+        sessionStorage.setItem("cart",JSON.stringify([]));
+    }
+    new_cart = JSON.parse(sessionStorage.getItem("cart"))
+    var total = 0;
+    var subAmount = 0;
+    new_cart.forEach(element => {
+        total += parseInt(element.price);
+        subAmount += parseInt(element.amount)
+    });
+    var defualtCartTop = '<div class="cart_header"><h3 class="heading">Shopping Cart</h3><h3 class="heading" id="close" onclick="closeCart()">Close</h3><h3 class="action" onclick="clearCart()" >Remove all</h3></div>';
+    var defualtCartBottom = '<div class="checkout"><div class="total"><div><div class="Subtotal">Sub-Total</div><div class="items">'+ subAmount +' items</div></div><div class="total-amount">'+total+'kr</div></div><a href="../complete_order/order_complete.html"><h1 class="button">Checkout</h1></a></div>';
+    var items = "";
+    new_cart.forEach(element => {
+        items += '<div class="cart_items"><img src='+ element.img +' style="width:50px;"/><h1 class="title">'+ element.title +'</h1><div class="counter"><div class="btn" onclick="addAmount(\'' + element.id + '\')" >+</div><div class="count">'+element.amount+'</div><div class="btn" onclick="removeAmount(\'' + element.id + '\')" >-</div></div><div class="prices"><div class="amount">'+ element.price +'</div><div class="remove" onclick="removeItem(\'' + element.id + '\')">Remove</div></div></div>';
+    });
+    document.getElementById("cart_content").innerHTML = defualtCartTop + items + defualtCartBottom;
+    
+}
+
+function addProduct(id) {
+    
+    new_product = products.find(x => x.id === id);
+    new_product.amount = 1;
+    cart.push(new_product);
+    sessionStorage.setItem("cart",JSON.stringify(cart));
+    console.log(cart);
+}
+function clearCart(){
+    cart = [];
+    sessionStorage.setItem("cart",JSON.stringify([]))
+    loadCart();
+    openCart();
+    console.log("gfd");
+}
+function removeItem(id) {
+    let updated_cart = JSON.parse(sessionStorage.getItem("cart"));
+    console.log(updated_cart);
+    let index = updated_cart.findIndex(x => x.id === id);
+    updated_cart.splice(index, 1);
+    sessionStorage.setItem("cart", JSON.stringify(updated_cart));
+    console.log(JSON.parse(sessionStorage.getItem("cart")));
+    loadCart();
+    console.log("obama");
+  }
+
+  function addAmount(id){
+    console.log("obama")
+    let updated_cart = JSON.parse(sessionStorage.getItem("cart"));
+    if (updated_cart.find(x => x.id === id).amount < 10){
+        updated_cart.find(x => x.id === id).amount += 1;
+        updated_cart.find(x => x.id === id).price = parseInt(updated_cart.find(x => x.id === id).amount) * parseInt(products.find(x => x.id === id).price);
+    }
+    sessionStorage.setItem("cart", JSON.stringify(updated_cart));
+    loadCart()
+}
+
+function removeAmount(id){
+    let updated_cart = JSON.parse(sessionStorage.getItem("cart"));
+    if (updated_cart.find(x => x.id === id).amount > 1){
+        updated_cart.find(x => x.id === id).amount -= 1;
+        updated_cart.find(x => x.id === id).price = parseInt(updated_cart.find(x => x.id === id).amount) * parseInt(products.find(x => x.id === id).price);
+    }
+    sessionStorage.setItem("cart", JSON.stringify(updated_cart));
+    loadCart()
 }

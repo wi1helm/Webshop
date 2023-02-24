@@ -9,6 +9,20 @@
     <title>Masterpiece Market</title>
 </head>
 <body>
+    <div class="cart_dropdown">
+        <div id="background">
+            <div id="cart_content" id="#cart">
+                <div class="cart_header">
+                    <h3 class="heading">Shopping Cart</h3>
+                    <h3 class="heading" id="close" onclick="closeCart()">Close</h3>
+                    <h3 class="action" onclick="clearCart()">Remove all</h3>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="container">
         <div id="content">
             <nav>
@@ -40,7 +54,7 @@
                             <div id="search">
                                
                             </div>
-                            <h1>Cart</h1>
+                            <a onclick="openCart(), loadCart()"><h1>Cart</h1></a>
                         </div>
                     </div>
                 </div>
@@ -52,137 +66,137 @@
                     <div id="products_container">
                         <div class="products_content">
                             <div class="products">
-                                <a onclick="saveClick('alien_invasion')" href="../product_template/product.html"><img src="../images/sci-fi/Alien_Invasion.png"></a> 
-                                <a onclick="saveClick('alien_invasion')" href="../product_template/product.html" class="titel"><h2>Alien Invasion</h2></a>
+                                <a onclick="saveClick('alien_invasion')" ><img src="../images/sci-fi/Alien_Invasion.png"></a> 
+                                <a onclick="saveClick('alien_invasion')"  class="titel"><h2>Alien Invasion</h2></a>
                                 <div class="products_buy">
                                     <h1>210 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('alien_invasion')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('android_uprising')" href="../product_template/product.html"><img src="../images/sci-fi/Android_Uprising.png"></a> 
-                                <a onclick="saveClick('android_uprising')" href="../product_template/product.html" class="titel"><h2>Android Uprising</h2></a>
+                                <a onclick="saveClick('android_uprising')" ><img src="../images/sci-fi/Android_Uprising.png"></a> 
+                                <a onclick="saveClick('android_uprising')"  class="titel"><h2>Android Uprising</h2></a>
                                 <div class="products_buy">
                                     <h1>180 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('android_uprising')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('artifcial_intellifence_dominion')" href="../product_template/product.html"><img src="../images/sci-fi/Artifcial_Intelligence_Dominion.png"></a> 
-                                <a onclick="saveClick('artifcial_intellifence_dominion')" href="../product_template/product.html" class="titel"><h2>Artifcial Intellifence Dominion</h2></a>
+                                <a onclick="saveClick('artifcial_intellifence_dominion')" ><img src="../images/sci-fi/Artifcial_Intelligence_Dominion.png"></a> 
+                                <a onclick="saveClick('artifcial_intellifence_dominion')"  class="titel"><h2>Artifcial Intellifence Dominion</h2></a>
                                 <div class="products_buy">
                                     <h1>400 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('artifcial_intellifence_dominion')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('cyber_cityscape')" href="../product_template/product.html"><img src="../images/sci-fi/Cyber_Cityscape.png"></a> 
-                                <a onclick="saveClick('cyber_cityscape')" href="../product_template/product.html" class="titel"><h2>Cyber Cityscape</h2></a>
+                                <a onclick="saveClick('cyber_cityscape')" ><img src="../images/sci-fi/Cyber_Cityscape.png"></a> 
+                                <a onclick="saveClick('cyber_cityscape')"  class="titel"><h2>Cyber Cityscape</h2></a>
                                 <div class="products_buy">
                                     <h1>170 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('cyber_cityscape')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products_content">
                             <div class="products">
-                                <a onclick="saveClick('cyberpunkt_metropolis')" href="../product_template/product.html"><img src="../images/sci-fi/Cyberpunk_Metropolis.png"></a> 
-                                <a onclick="saveClick('cyberpunkt_metropolis')" href="../product_template/product.html" class="titel"><h2>Cyberpunk Meropolis</h2></a>
+                                <a onclick="saveClick('cyberpunkt_metropolis')" ><img src="../images/sci-fi/Cyberpunk_Metropolis.png"></a> 
+                                <a onclick="saveClick('cyberpunkt_metropolis')"  class="titel"><h2>Cyberpunk Meropolis</h2></a>
                                 <div class="products_buy">
                                     <h1>50 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('cyberpunkt_metropolis')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('deep_space_exploreation')" href="../product_template/product.html"><img src="../images/sci-fi/Deep_Space_Exploreation.png"></a> 
-                                <a onclick="saveClick('deep_space_exploreation')" href="../product_template/product.html" class="titel"><h2>Deep Space Exploreation</h2></a>
+                                <a onclick="saveClick('deep_space_exploreation')" ><img src="../images/sci-fi/Deep_Space_Exploreation.png"></a> 
+                                <a onclick="saveClick('deep_space_exploreation')"  class="titel"><h2>Deep Space Exploreation</h2></a>
                                 <div class="products_buy">
                                     <h1>120 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('deep_space_exploreation')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('dystopian_future')" href="../product_template/product.html"><img src="../images/sci-fi/Dystopian_Future.png"></a> 
-                                <a onclick="saveClick('dystopian_future')" href="../product_template/product.html" class="titel"><h2>Dystopian Future</h2></a>
+                                <a onclick="saveClick('dystopian_future')" ><img src="../images/sci-fi/Dystopian_Future.png"></a> 
+                                <a onclick="saveClick('dystopian_future')"  class="titel"><h2>Dystopian Future</h2></a>
                                 <div class="products_buy">
                                     <h1>190 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('dystopian_future')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('galactic_battlefront')" href="../product_template/product.html"><img src="../images/sci-fi/Galactic_Battlefront.png"></a> 
-                                <a onclick="saveClick('galactic_battlefront')" href="../product_template/product.html" class="titel"><h2>Galactic Battlefront</h2></a>
+                                <a onclick="saveClick('galactic_battlefront')" ><img src="../images/sci-fi/Galactic_Battlefront.png"></a> 
+                                <a onclick="saveClick('galactic_battlefront')"  class="titel"><h2>Galactic Battlefront</h2></a>
                                 <div class="products_buy">
                                     <h1>160 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('galactic_battlefront')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products_content">
                             <div class="products">
-                                <a onclick="saveClick('intergalactic_trade_hub')" href="../product_template/product.html"><img src="../images/sci-fi/Intergalactic_Trade_Hub.png"></a> 
-                                <a onclick="saveClick('intergalactic_trade_hub')" href="../product_template/product.html" class="titel"><h2>Intergalactic Trade Hub</h2></a>
+                                <a onclick="saveClick('intergalactic_trade_hub')" ><img src="../images/sci-fi/Intergalactic_Trade_Hub.png"></a> 
+                                <a onclick="saveClick('intergalactic_trade_hub')"  class="titel"><h2>Intergalactic Trade Hub</h2></a>
                                 <div class="products_buy">
                                     <h1>150 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('intergalactic_trade_hub')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('interstellar_wormhole')" href="../product_template/product.html"><img src="../images/sci-fi/Interstellar_Wormhole.png"></a> 
-                                <a onclick="saveClick('interstellar_wormhole')" href="../product_template/product.html" class="titel"><h2>Interstellar Wormhole</h2></a>
+                                <a onclick="saveClick('interstellar_wormhole')" ><img src="../images/sci-fi/Interstellar_Wormhole.png"></a> 
+                                <a onclick="saveClick('interstellar_wormhole')"  class="titel"><h2>Interstellar Wormhole</h2></a>
                                 <div class="products_buy">
                                     <h1>260 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('interstellar_wormhole')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('quantum_realm')" href="../product_template/product.html"><img src="../images/sci-fi/Quantum_Realm.png"></a> 
-                                <a onclick="saveClick('quantum_realm')" href="../product_template/product.html" class="titel"><h2>Quantum Realm</h2></a>
+                                <a onclick="saveClick('quantum_realm')" ><img src="../images/sci-fi/Quantum_Realm.png"></a> 
+                                <a onclick="saveClick('quantum_realm')"  class="titel"><h2>Quantum Realm</h2></a>
                                 <div class="products_buy">
                                     <h1>170 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('quantum_realm')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('robots_moon')" href="../product_template/product.html"><img src="../images/sci-fi/Robots_on_the_Moon.png"></a> 
-                                <a onclick="saveClick('robots_moon')" href="../product_template/product.html" class="titel"><h2>Robot on the Moon</h2></a>
+                                <a onclick="saveClick('robots_moon')" ><img src="../images/sci-fi/Robots_on_the_Moon.png"></a> 
+                                <a onclick="saveClick('robots_moon')"  class="titel"><h2>Robot on the Moon</h2></a>
                                 <div class="products_buy">
                                     <h1>210 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('robots_moon')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>
                         <div class="products_content">
                             <div class="products">
-                                <a onclick="saveClick('starship_enterprise')" href="../product_template/product.html"><img src="../images/sci-fi/Starship_Enterprise.png"></a> 
-                                <a onclick="saveClick('starship_enterprise')" href="../product_template/product.html" class="titel"><h2>Starship Enterprise</h2></a>
+                                <a onclick="saveClick('starship_enterprise')" ><img src="../images/sci-fi/Starship_Enterprise.png"></a> 
+                                <a onclick="saveClick('starship_enterprise')"  class="titel"><h2>Starship Enterprise</h2></a>
                                 <div class="products_buy">
                                     <h1>100 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('starship_enterprise')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('terraforming_mars')" href="../product_template/product.html"><img src="../images/sci-fi/Terraforming_Mars.png"></a> 
-                                <a onclick="saveClick('terraforming_mars')" href="../product_template/product.html" class="titel"><h2>Terraforming Mars</h2></a>
+                                <a onclick="saveClick('terraforming_mars')" ><img src="../images/sci-fi/Terraforming_Mars.png"></a> 
+                                <a onclick="saveClick('terraforming_mars')"  class="titel"><h2>Terraforming Mars</h2></a>
                                 <div class="products_buy">
                                     <h1>100 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('terraforming_mars')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('the_singlarity')" href="../product_template/product.html"><img src="../images/sci-fi/The_Singularity.png"></a> 
-                                <a onclick="saveClick('the_singlarity')" href="../product_template/product.html" class="titel"><h2>The Singlarity</h2></a>
+                                <a onclick="saveClick('the_singlarity')" ><img src="../images/sci-fi/The_Singularity.png"></a> 
+                                <a onclick="saveClick('the_singlarity')"  class="titel"><h2>The Singlarity</h2></a>
                                 <div class="products_buy">
                                     <h1>100 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('the_singlarity')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                             <div class="products">
-                                <a onclick="saveClick('parallel_universe')" href="../product_template/product.html"><img src="../images/sci-fi/Parallel_Universe.png"></a> 
-                                <a onclick="saveClick('parallel_universe')" href="../product_template/product.html" class="titel"><h2>Parallel Universe</h2></a>
+                                <a onclick="saveClick('parallel_universe')" ><img src="../images/sci-fi/Parallel_Universe.png"></a> 
+                                <a onclick="saveClick('parallel_universe')"  class="titel"><h2>Parallel Universe</h2></a>
                                 <div class="products_buy">
                                     <h1>200 Kr</h1>
-                                    <h2>Add To Cart</h2>
+                                    <a onclick="addProduct('parallel_universe')"><h2>Add To Cart</h1></a>
                                 </div>
                             </div>
                         </div>

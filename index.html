@@ -8,7 +8,21 @@
     <script src="javascript.js"></script>
     <title>Masterpiece Market</title>
 </head>
-<body>
+<body">
+    <div class="cart_dropdown">
+        <div id="background">
+            <div id="cart_content" id="#cart">
+                <div class="cart_header">
+                    <h3 class="heading">Shopping Cart</h3>
+                    <h3 class="heading" id="close" onclick="closeCart()">Close</h3>
+                    <h3 class="action" onclick="clearCart()">Remove all</h3>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="container">
         <div id="content">
             <nav>
@@ -34,13 +48,13 @@
                     </div>
                     <div id="container_bar">
                         <div id="search_bar">
-                            <h1><a href="fantasy.html">Fantasy</a></h1>
-                            <h1><a href="nature.html">Nature</a></h1>
-                            <h1><a href="sci-fi.html">Sci-Fi</a></h1>
+                            <h1><a href="../products/fantasy.html">Fantasy</a></h1>
+                            <h1><a href="../products/nature.html">Nature</a></h1>
+                            <h1><a href="../products/sci-fi.html">Sci-Fi</a></h1>
                             <div id="search">
                                
                             </div>
-                            <h1>Cart</h1>
+                            <a onclick="openCart(), loadCart()"><h1>Cart</h1></a>
                         </div>
                     </div>
                 </div>
@@ -81,35 +95,35 @@
                     </div>
                     <div class="products_content">
                         <div class="products">
-                            <a onclick="saveClick('mount_resv')" href="../product_template/product.html"><img src="../images/new/Montain Reserve.png"></a> 
-                            <a onclick="saveClick('mount_resv')" href="../product_template/product.html" class="titel"><h2>Mountain Reserve 1080x1920</h2></a>
+                            <a onclick="saveClick('mount_resv')" ><img src="../images/new/Montain_Reserve.png"></a> 
+                            <a onclick="saveClick('mount_resv')" class="titel"><h2>Mountain Reserve</h2></a>
+                            <div class="products_buy">
+                                <h1>160 Kr</h1>
+                                <a onclick="addProduct('mount_resv')"><h2>Add To Cart</h1></a>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <a onclick="saveClick('angel_war')" ><img src="../images/new/Angle_War.png"></a> 
+                            <a onclick="saveClick('angel_war')"  class="titel"><h2>Angel War</h2></a>
+                            <div class="products_buy">
+                                <h1>120 Kr</h1>
+                                <a onclick="addProduct('angel_war')"><h2>Add To Cart</h1></a>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <a onclick="saveClick('world_prot')" ><img src="../images/new/World_Protest.png"></a> 
+                            <a onclick="saveClick('world_prot')"  class="titel"><h2>World Protest</h2></a>
+                            <div class="products_buy">
+                                <h1>149 Kr</h1>
+                                <a onclick="addProduct('world_prot')"><h2>Add To Cart</h1></a>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <a onclick="saveClick('wavy_fall')" ><img src="../images/new/Wavy_Waterfall.png"></a> 
+                            <a onclick="saveClick('wavy_fall')"  class="titel"><h2>Wavy Waterfall</h2></a>
                             <div class="products_buy">
                                 <h1>99 Kr</h1>
-                                <h2>Add To Cart</h1>
-                            </div>
-                        </div>
-                        <div class="products">
-                            <a onclick="saveClick('angel_war')" href="../product_template/product.html"><img src="../images/new/angle war.png"></a> 
-                            <a onclick="saveClick('angel_war')" href="../product_template/product.html" class="titel"><h2>Angel War 1080x1920</h2></a>
-                            <div class="products_buy">
-                                <h1>199 Kr</h1>
-                                <h2>Add To Cart</h1>
-                            </div>
-                        </div>
-                        <div class="products">
-                            <a onclick="saveClick('world_prot')" href="../product_template/product.html"><img src="../images/new/world protest.png"></a> 
-                            <a onclick="saveClick('world_prot')" href="../product_template/product.html" class="titel"><h2>World Protest 4k</h2></a>
-                            <div class="products_buy">
-                                <h1>199 Kr</h1>
-                                <h2>Add To Cart</h1>
-                            </div>
-                        </div>
-                        <div class="products">
-                            <a onclick="saveClick('wavy_fall')" href="../product_template/product.html"><img src="../images/new/wavy waterfall.png"></a> 
-                            <a onclick="saveClick('wavy_fall')" href="../product_template/product.html" class="titel"><h2>Wavy Waterfall 8k</h2></a>
-                            <div class="products_buy">
-                                <h1>249 Kr</h1>
-                                <h2>Add To Cart</h1>
+                                <a onclick="addProduct('wavy_fall')"><h2>Add To Cart</h1></a>
                             </div>
                         </div>
                     </div>
